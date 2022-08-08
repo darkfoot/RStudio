@@ -13,7 +13,7 @@ plot(frequency_data$No..hits.in.text ~ frequency_data$No..hits.in.text)
 plot(frequency_data$No..hits.in.text ~ frequency_data$Freq..per.hundred)
 boxplot(frequency_data$No..hits.in.text ~ frequency_data$language)
 
-# plot freq. per hundret against everything
+# plot freq. per hundred against everything
 plot(frequency_data$Freq..per.hundred ~ frequency_data$No..words.in.text)
 plot(frequency_data$Freq..per.hundred ~ frequency_data$No..hits.in.text)
 plot(frequency_data$Freq..per.hundred ~ frequency_data$Freq..per.hundred)

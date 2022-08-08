@@ -1,3 +1,6 @@
+# setting plotlayout
+par(mfrow=c(1, 1))
+
 # make a boxplot
 boxplot(frequency_data$Freq..per.hundred ~ frequency_data$language, 
         names = c("m'uerica", "bri*ish"),  # set names for x-axis
