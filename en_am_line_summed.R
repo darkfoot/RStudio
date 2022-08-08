@@ -29,12 +29,12 @@ fig <- plot_ly(x = textlength,
                type = "scatter",
                mode = "lines", 
                name = "Bri*ish") %>%
-  add_trace(x = textlength,  # everlay second dataset with first one
+  add_trace(x = textlength,  # overlay second data set with first one
           y = a_freq,
           type = "scatter",
           mode = "lines",
           name = "M'uerica",
-          inherit = FALSE) %>%  # inheriance off, to be able to use the values from a_freq
+          inherit = FALSE) %>%  # inheritance off, to be able to use the values from a_freq
   layout(title="whatever")
 
 # show figure
