@@ -31,6 +31,6 @@ plot_ly(x = xb,
             name = "Bri*ish smooth") %>%
   add_trace(x = xa,
             y = predict(smooth_a),
-            name = "Bri*ish smooth") %>%
+            name = "M'uerica smooth") %>%
   layout(title = "pornwords")
 
