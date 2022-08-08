@@ -17,20 +17,58 @@ ya <- mean_freq$mean_freq[mean_freq$language == "A"]
 smooth_b <- loess(yb ~ xb)
 smooth_a <- loess(ya ~ xa)
 
-# plot data
-plot_ly(x = xb,
-        y = yb,
-        type = "scatter",
-        mode = "lines",
-        name = "Bri*ish") %>%
-  add_trace(x = xa,
-            y = ya,
-            name = "M'uerica") %>%
-  add_trace(x = xb,
-            y = predict(smooth_b),
-            name = "Bri*ish smooth") %>%
-  add_trace(x = xa,
-            y = predict(smooth_a),
-            name = "M'uerica smooth") %>%
-  layout(title = "pornwords")
+# get mean
+mean_a <- mean(ya)
+mean_b <- mean(yb)
 
+# get median
+median_a <- median(ya)
+median_b <- median(yb)
+
+# plot data
+fig <- plot_ly(x = xb,
+               y = yb,
+               type = "scatter",
+               mode = "line",
+               name = "Bri*ish")
+
+fig <- add_trace(fig,
+                 x = xa,
+                 y = ya,
+                 name = "M'uerica")
+
+fig <- add_trace(fig,
+                 x = xb,
+                 y = predict(smooth_b),
+                 name = "Bri*ish smooth")
+
+fig <- add_trace(fig,
+                 x = xa,
+                 y = predict(smooth_a),
+                 name = "M'uerica smooth")
+
+fig <- add_trace(fig,
+                 x = xa,
+                 y = mean_a,
+                 name = "M'uerica mean")
+
+fig <- add_trace(fig,
+                 x = xa,
+                 y = mean_b,
+                 name = "Bri*ish mean")
+
+fig <- add_trace(fig,
+                 x = xa,
+                 y = median_a,
+                 name = "M'uerica median")
+
+fig <- add_trace(fig,
+                 x = xb,
+                 y = median_b,
+                 name = "Bri*ish median")
+
+fig <- layout(fig, 
+              title = "pornwords")
+
+# show plot
+fig
