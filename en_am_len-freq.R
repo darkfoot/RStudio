@@ -25,8 +25,10 @@ plot(x = freq_data$freq_ranges,
      y = freq_data$avg_len,
      ylim = c(0, 4700),
      col = "black",
+     xlab = "frequency, grouped by range",
+     ylab = "mean length of texts",
      main="Length of text sorted by frequency")
- 
+
 lines(x = am$freq_ranges, 
       y = am$avg_len,
       col = "red")
@@ -37,5 +39,5 @@ lines(x = en$freq_ranges,
 
 legend("topleft",
        c("total", "Bri*ish", "M'uerica"),
-       lty = c(1, 1, 1),
+       lty = c(1, 1, 1),  # linetype in legend
        col = c("black", "blue", "red"))
