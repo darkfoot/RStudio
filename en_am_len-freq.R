@@ -1,5 +1,8 @@
 library(plotly)
 
+# set plotting area to 1 plot high and 1 plot wide
+par(mfrow=c(1, 1))
+
 # regroup data to ranges of frequency
 total <- frequency_data %>%  # get data
   mutate(freq_ranges = cut(Freq..per.hundred, seq(0, 2.2, 0.1))) %>%  # mutate to ranges of freq

@@ -37,9 +37,11 @@ fig <- add_trace(fig,
                  y = ya,
                  name = "M'uerica")
 
-fig <- add_trace(fig,
-                 x = xb,
-                 y = predict(smooth_b),
+ fig <- add_trace(fig,
+                  x = xb,
+                  y = predict(smooth_b),
+                  type = "scatter",
+                  mode = "line",
                  name = "Bri*ish smooth")
 
 fig <- add_trace(fig,
@@ -57,18 +59,19 @@ fig <- add_trace(fig,
                  y = mean_b,
                  name = "Bri*ish mean")
 
-fig <- add_trace(fig,
-                 x = xa,
-                 y = median_a,
-                 name = "M'uerica median")
-
-fig <- add_trace(fig,
-                 x = xb,
-                 y = median_b,
-                 name = "Bri*ish median")
+# fig <- add_trace(fig,
+#                  x = xa,
+#                  y = median_a,
+#                  name = "M'uerica median")
+# 
+# fig <- add_trace(fig,
+#                  x = xb,
+#                  y = median_b,
+#                  name = "Bri*ish median")
 
 fig <- layout(fig, 
-              title = "pornwords")
+              title = "pornwords",
+              scene = list(xaxis = "test"))
 
 # show plot
 fig
