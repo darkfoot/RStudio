@@ -1,4 +1,5 @@
 library(plotly)
+library(dplyr)
 
 mean_freq <- frequency_data %>%
                 group_by(No..words.in.text) %>%
