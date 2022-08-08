@@ -16,3 +16,4 @@ plot_ly(x = mean_freq$No..words.in.text[mean_freq$language == "B"],
   add_trace(x = mean_freq$No..words.in.text[mean_freq$language == "A"],
             y = mean_freq$mean_freq[mean_freq$language == "A"],
             name = "M'uerica")
+
